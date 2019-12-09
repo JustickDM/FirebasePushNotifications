@@ -31,8 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,9 +45,10 @@
   <ItemGroup>
     <Compile Include="Enums\MessagePriority.cs" />
     <Compile Include="FCMClient.cs" />
-    <Compile Include="Interfaces\INotification.cs" />
+    <Compile Include="Interfaces\IBaseNotification.cs" />
     <Compile Include="Interfaces\ISerializer.cs" />
     <Compile Include="Models\AndroidNotification.cs" />
+    <Compile Include="Models\BaseNotification.cs" />
     <Compile Include="Models\IOSNotification.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\MessageResponse.cs" />

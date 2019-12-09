@@ -125,7 +125,7 @@ namespace FirebasePushNotifications.Models
         public IDictionary<string, string> Data { get; set; }
 
         [JsonProperty(PropertyName = "notification")]
-        public INotification Notification { get; set; }
+        public IBaseNotification Notification { get; set; }
 
         #endregion
     }

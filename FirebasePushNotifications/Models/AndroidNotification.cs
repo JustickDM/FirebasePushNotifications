@@ -1,36 +1,14 @@
-﻿using FirebasePushNotifications.Interfaces;
-
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace FirebasePushNotifications.Models
 {
-    public class AndroidNotification : INotification
+	public class AndroidNotification : BaseNotification
     {
-        /// <summary>
-        /// Indicates notification title.
-        /// </summary>
-        [JsonProperty(PropertyName = "title")]
-        public string Title { get; set; }
-
-        /// <summary>
-        /// Indicates notification body text.
-        /// </summary>
-        [JsonProperty(PropertyName = "body")]
-        public string Body { get; set; }
-
         /// <summary>
         /// Indicates notification icon. Sets value to myicon for drawable resource myicon.
         /// </summary>
         [JsonProperty(PropertyName = "icon")]
         public string Icon { get; set; }
-
-        /// <summary>
-        /// Indicates a sound to play when the device receives a notification.
-        /// Supports default or the filename of a sound resource bundled in the app.
-        /// Sound files must reside in /res/raw/.
-        /// </summary>
-        [JsonProperty(PropertyName = "sound")]
-        public string Sound { get; set; }
 
         /// <summary>
         /// Indicates whether each notification results in a new entry in the notification drawer on Android. 

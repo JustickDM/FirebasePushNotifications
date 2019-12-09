@@ -2,6 +2,7 @@
 using FirebasePushNotifications.Models;
 
 using System;
+using System.Threading;
 
 namespace TestFirebasePushNotifications
 {
@@ -13,7 +14,7 @@ namespace TestFirebasePushNotifications
         {
             var deviceToken1 = "";
             var deviceToken2 = ""; 
-
+			
             var deviceTokens = new string[] { deviceToken1, deviceToken2 };
 
             var client = new FCMClient(serverKey);

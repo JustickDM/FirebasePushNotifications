@@ -1,30 +1,9 @@
-﻿using FirebasePushNotifications.Interfaces;
-
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace FirebasePushNotifications.Models
 {
-    public class IOSNotification: INotification
-    {
-        /// <summary>
-        /// Indicates notification title. This field is not visible on iOS phones and tablets.
-        /// </summary>
-        [JsonProperty(PropertyName = "title")]
-        public string Title { get; set; }
-
-        /// <summary>
-        /// Indicates notification body text.
-        /// </summary>
-        [JsonProperty(PropertyName = "body")]
-        public string Body { get; set; }
-
-        /// <summary>
-        /// Indicates a sound to play when the device receives a notification. Sound files can be in the main bundle of the client app or in the Library/Sounds folder of the app's data container.
-        /// See the iOS Developer Library for more information.
-        /// </summary>
-        [JsonProperty(PropertyName = "sound")]
-        public string Sound { get; set; }
-
+	public class IOSNotification: BaseNotification
+	{
         /// <summary>
         /// Indicates the badge on the client app home icon.
         /// </summary>
@@ -36,7 +15,6 @@ namespace FirebasePushNotifications.Models
         /// </summary>
         [JsonProperty(PropertyName = "click_action")]
         public string ClickAction { get; set; }
-
 
         /// <summary>
         /// Indicates the key to the body string for localization. Corresponds to "loc-key" in the APNs payload.
